@@ -1,0 +1,132 @@
+/* Overall Page Layout & Background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a192f; /* Dark Navy Blue background */
+    color: #333;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers container card horizontally on the screen */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Centered Main Content Card */
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+h1, h2 { 
+    color: #1b2a4a; 
+    text-align: center; /* Centers headings inside the white card */
+    margin-top: 0;
+}
+
+/* Input Form Layout - Renders a clean 2x2 grid for your 4 fields */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;
+    margin-bottom: 30px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.form-group { 
+    display: flex; 
+    flex-direction: column; 
+}
+
+label { 
+    font-weight: 600; 
+    margin-bottom: 5px; 
+    font-size: 14px; 
+    color: #4a5568;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #3182ce;
+}
+
+/* Form Submission Button */
+button[type="submit"] {
+    grid-column: span 2; /* Stretches the button across both grid columns */
+    background-color: #00b4d8; /* Bright tech accent blue */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.2s ease;
+}
+
+button[type="submit"]:hover { 
+    background-color: #0096c7; 
+}
+
+/* Inventory Data Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th { 
+    background-color: #1b2a4a; /* Dark navy table header background */
+    color: white; 
+    font-weight: 600;
+}
+
+/* Action Delete Button */
+.delete-btn {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.delete-btn:hover { 
+    background-color: #bd2130; 
+}
+
+/* New Footer Layout (Footmark) */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto; /* Keeps footer pinned beautifully to the absolute bottom */
+}
+
+footer p {
+    color: #8892b0; /* Light slate text contrast against deep navy body background */
+    font-size: 14px;
+    margin: 0;
+}
